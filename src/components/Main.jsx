@@ -1,12 +1,16 @@
-import { styled, AppBar, Box, Container, ThemeProvider, Typography } from "@mui/material";
 import React from "react";
+import { Navbar, Hero } from "./";
+
 
 
 const Main = () => {
 
 
   return (
-    <></>
+   <>
+   <Navbar />
+   <Hero />
+   </>
   );
 };
 

@@ -1,4 +1,4 @@
-import { AppBar, Box, Typography } from "@mui/material";
+import { styled,AppBar, Box, Link, Typography } from "@mui/material";
 import { flexbox, maxWidth } from "@mui/system";
 import React from "react";
 
@@ -37,17 +37,34 @@ const Navbar = () => {
               gap: "1rem",
             }}
           >
-            <Box
-              component="img"
-              sx={{ maxHeight: "45px", maxWidth: "45px", objectFit: "cover" }}
-              src={navIcon}
-            />
+             <Box
+            //  component="img"
+            //  sx={{ maxHeight: "45px", maxWidth: "45px", objectFit: "cover" }}
+            //  src={navIcon}
+            /> 
             <Typography variant="h6" component="div" sx={{flexFrow: 1}} >
-              My Portfolio
+              FrontEnd Developer
             </Typography>
           </Box>
+
+            <CustomBox>
+              <Link to="home" className="link" smooth>
+              Home
+              </Link>
+
+              <Link to="work" className="link" smooth>
+              My Work
+              </Link>
+
+              <Link to="about" className="link" smooth>
+              About
+              </Link>
+            </CustomBox>
+
         </CustomToolbar>
       </AppBar>
     </Box>
   );
 };
+
+export default Navbar;
